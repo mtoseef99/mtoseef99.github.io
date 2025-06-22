@@ -122,7 +122,10 @@
              style="width:100%;max-width:150px;height:auto;object-fit:cover;border-radius:50%;">
       </a>
       <!-- Dark-mode toggle icon -->
-      <div class="theme-toggle" onclick="document.body.classList.toggle('dark')">🌓</div>
+      <div style="display: flex; justify-content: center; margin-top: 6px;">
+        <div onclick="document.body.classList.toggle('dark')"
+             style="cursor:pointer; font-size: 22px;">🌓</div>
+      </div>
     </td>
   </tr>
 </table>
@@ -298,24 +301,23 @@
 <div class="section-card">
   <h3>🛠 Academic Service</h3>
   <p><strong>Conference Reviewer:</strong> ICONIP 2024 & 2025, IEEE Big Data 2022, ISMSI 2020 – 2021</p>
-  <p><strong>Journal Reviewer:</strong> <em>Computational & Structural Biotechnology Journal</em>, <em>Heliyon</em>, <em>BioData Mining</em>, <em>PeerJ Computer Science</em></p>
+  <p><strong>Journal Reviewer:</strong> <em>Computational and Structural Biotechnology Journal</em>, <em>Heliyon</em>, <em>BioData Mining</em>, <em>PeerJ Computer Science</em></p>
 </div>
 
-<!-- ----------  VISITOR COUNTER ---------- -->
+<!-- ----------  CLUSTRMAP WIDGET ---------- -->
 <div style="text-align:center; margin-top:40px;">
-  <a href="https://clustrmaps.com/site/mtoseef99.github.io" title="Visit tracker">
-    <img src="https://clustrmaps.com/map_v2.png?d=wgmTzE27wxgiM1cyv0NR4x5qbW0APmuvEkKyTL_bBbk"
-         alt="Visitor map"
-         style="width:100%; max-width:360px; height:auto; border:1px solid #ccc; border-radius:6px;" />
-  </a>
+  <script id="clustrmaps"
+          type="text/javascript"
+          src="https://clustrmaps.com/map_v2.js?d=wgmTzE27wxgiM1cyv0NR4x5qbW0APmuvEkKyTL_bBbk&cl=ffffff&w=320">
+  </script>
 </div>
 
 
 <!-- ----------  FOOTER ---------- -->
 <table style="width:100%;max-width:800px;border:0;margin:auto;">
   <tr><td style="padding:0;">
-    <p style="text-align:center;font-size:small;">
-      Design adapted from <a href="https://github.com/leonidk/new_website">Jekyll fork</a>.
+    <p style="text-align:center;font-size:x-small;">
+      Design adapted from <a href="https://github.com/leonidk/new_website" style="font-size:x-small">Jekyll fork</a>.
     </p>
   </td></tr>
 </table>
