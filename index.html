@@ -107,7 +107,7 @@
       <!-- Links -->
       <p style="text-align:center">
         <a href="mailto:mtoseef2-c@my.cityu.edu.hk">Email</a> &nbsp;/&nbsp;
-        <a href="data/Toseef_CV.pdf">CV</a> &nbsp;/&nbsp;
+        <a href="data/MuhammadToseef_CV.pdf">CV</a> &nbsp;/&nbsp;
         <a href="https://scholar.google.com/citations?user=Zlb-qX4AAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
         <a href="https://orcid.org/0000-0003-1507-104X">ORCID</a> &nbsp;/&nbsp;
         <a href="https://github.com/mtoseef99/">GitHub</a> &nbsp;/&nbsp;
@@ -322,6 +322,34 @@
     </p>
   </td></tr>
 </table>
+
+<script>
+  (function () {
+    const toggleBtn = document.getElementById('theme-toggle');
+  
+    function applyTheme(theme) {
+      document.body.classList.toggle('dark', theme === 'dark');
+      localStorage.theme = theme;
+    }
+  
+    // Determine theme from time if no stored preference
+    const stored = localStorage.theme;
+    const hour = new Date().getHours();
+    const autoTheme = (hour >= 7 && hour < 19) ? 'light' : 'dark';
+  
+    if (stored) {
+      applyTheme(stored);
+    } else {
+      applyTheme(autoTheme);
+    }
+  
+    // Toggle button click event
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+    });
+  })();
+  </script>
 
 </body>
 </html>
