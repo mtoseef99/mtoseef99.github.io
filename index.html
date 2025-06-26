@@ -86,6 +86,10 @@
     .section-card li {
       margin: 4px 0;
     }
+
+    .clustr-icon:hover {
+      opacity: 1.0 !important;
+    }
     
   </style>
   
@@ -321,12 +325,16 @@
 </div>
 
 <!-- ----------  CLUSTRMAP WIDGET ---------- -->
-<div style="text-align:center; margin-top:40px;">
+<!-- <div style="text-align:center; margin-top:40px;">
   <script id="clustrmaps"
           type="text/javascript"
           src="https://clustrmaps.com/map_v2.js?d=wgmTzE27wxgiM1cyv0NR4x5qbW0APmuvEkKyTL_bBbk&cl=ffffff&w=320">
   </script>
-</div>
+</div> -->
+
+
+
+
 
 
 <!-- ----------  FOOTER ---------- -->
@@ -367,4 +375,16 @@
   </script> -->
 
 </body>
+
+<!-- Bottom-right ClustrMaps icon inside layout -->
+<div style="position: relative; max-width: 800px; margin: 0 auto;">
+  <div style="position: absolute; bottom: 0; right: 0; padding: 6px;">
+    <a href="https://clustrmaps.com/site/1c6qw" target="_blank" title="View visitor map">
+      <img class="clustr-icon" src="https://clustrmaps.com/favicon.ico"
+           alt="Visitor Map Icon"
+           style="width:20px; height:20px; opacity:0.8; border-radius:4px;">
+    </a>
+  </div>
+</div>
+
 </html>
