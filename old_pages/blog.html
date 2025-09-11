@@ -146,16 +146,77 @@
   .nav-menu a:hover { text-decoration: underline; }
   .nav-menu a.active { font-weight: 600; text-decoration: underline; }
 
+
+  /* === UNIFIED NAVBAR (applied across all pages) === */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border, #eee);
+    backdrop-filter: saturate(150%) blur(6px);
+  }
+  body.dark .site-header, body.dark-mode .site-header {
+    background: #1e1e1e;
+    border-bottom-color: #333;
+  }
+  .nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 16px 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 16px; /* consistent brand text size */
+    letter-spacing: 0.2px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  }
+  .brand-sub { 
+    font-size: 12px; 
+    color: var(--muted, #666); 
+    font-weight: 400; 
+    margin-top: 2px; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  }
+  .nav-menu a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: var(--accent, #1772d0);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 15px; /* consistent link size */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  }
+  .nav-menu a:hover {
+    background: rgba(23,114,208,0.08);
+  }
+  .nav-menu a.active {
+    font-weight: 600;
+    text-decoration: underline;
+    color: inherit;
+  }
+
 </style>
   
-  <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
-<div id=\"shared-navbar\"></div>
 
-
-<div id="shared-navbar"></div>
+<header class="site-header">
+  <div class="nav-container">
+    <div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">Muhammad Toseef</a></div>
+    <div class="right">
+    <nav class="nav-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">Blog</a>
+    </nav></div>
+  </div>
+</header>
 
 
 
@@ -178,15 +239,14 @@
   <div class="date">September 10, 2025</div>
   <p>
     Welcome to my blog! I'll be sharing thoughts on my research in transfer learning, 
-    biomedical informatics, and computational biology. You'll also find insights 
-    from my time as a visiting PhD student at Harvard Medical School and reflections 
+    biomedical informatics, and computational biology. You'll also find insights and reflections 
     on the intersection of AI and healthcare.
   </p>
   <p>
-    Stay tuned for posts about large language models in genomics, clinical decision-making 
-    with high-throughput data, and my journey through academia. I hope these posts will 
+    Stay tuned for posts about large language models in clinical decision-making 
+    with high-throughput data, genomics, and my journey through academia. I hope these posts will 
     be useful for fellow researchers, students, and anyone interested in the exciting 
-    developments at the intersection of AI and medicine.
+    developments at the intersection of AI and healthcare.
   </p>
 </div>
 
@@ -241,70 +301,6 @@
     if (el) el.textContent = formatted;
   })();
 
-</script>
-
-<script>
-(function() {
-  function setActiveLink() {
-    try {
-      var path = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.nav-menu a').forEach(function(a) {
-        if (a.getAttribute('href') === path) a.classList.add('active');
-      });
-    } catch (e) { /* noop */ }
-  }
-  function mount(html) {
-    var mount = document.getElementById('shared-navbar');
-    if (mount) { mount.outerHTML = html; }
-    setActiveLink();
-  }
-  // Try to fetch shared partial; if blocked (e.g., file://), use embedded fallback
-  try {
-    if (window.fetch) {
-      fetch('navbar.html', {cache: 'no-store'})
-        .then(function(r) { if (!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
-        .then(mount)
-        .catch(function() { mount(`<header class="site-header">
-  <div class="nav-container">
-    <div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">Muhammad Toseef</a></div>
-    <div class="right">
-      <nav class="nav-menu" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="cv.html">CV</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-    </div>
-  </div>
-</header>`); });
-    } else {
-      mount(`<header class="site-header">
-  <div class="nav-container">
-    <div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">Muhammad Toseef</a></div>
-    <div class="right">
-      <nav class="nav-menu" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="cv.html">CV</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-    </div>
-  </div>
-</header>`);
-    }
-  } catch (e) {
-    mount(`<header class="site-header">
-  <div class="nav-container">
-    <div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">Muhammad Toseef</a></div>
-    <div class="right">
-      <nav class="nav-menu" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="cv.html">CV</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-    </div>
-  </div>
-</header>`);
-  }
-})();
 </script>
 </body>
 </html>

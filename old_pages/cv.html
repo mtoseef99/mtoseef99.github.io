@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV - Muhammad Toseef</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: #121212;
+      color: #f1f1f1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s;
+    }
+
+    body.dark-mode .section {
+      background: #1e1e1e;
+    }
+
+    .section h3 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #005599;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 18px;
+      color: #005599;
+    }
+
+    .section ul {
+      padding-left: 18px;
+    }
+
+    .section li {
+      margin: 12px 0;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .org-logo {
+      width: 36px;
+      height: 36px;
+      margin-right: 12px;
+      object-fit: contain;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .org-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .highlight {
+      font-weight: 600;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .skill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .skill-icon {
+      font-size: 20px;
+      width: 24px;
+    }
+
+    .skill-bar-container {
+      flex: 1;
+      background: #ddd;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-bar {
+      height: 100%;
+      background: #0077cc;
+      border-radius: 4px;
+    }
+
+    .dark-mode .skill-bar-container {
+      background: #333;
+    }
+
+    .dark-mode .skill-bar {
+      background: #66ccff;
+    }
+
+    .toggle-btn {
+      float: right;
+      margin-top: -30px;
+      margin-right: 8px;
+      background: #eee;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .dark-mode .toggle-btn {
+      background: #333;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px;
+      }
+      .section li {
+        flex-wrap: wrap;
+      }
+    }
+  
+  /* --- Shared minimal navbar --- */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 1px solid #eee;
+    backdrop-filter: saturate(150%) blur(6px);
+  }
+  body.dark .site-header, body.dark-mode .site-header { border-bottom: 1px solid #333; }
+  .nav-container {
+    max-width: 800px; margin: 0 auto;
+    padding: 10px 16px 8px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; flex-direction: column; line-height: 1.2; }
+  .brand-sub { font-size: 12px; color: #666; margin-top: 2px; }
+  body.dark .brand-sub, body.dark-mode .brand-sub { color: #aaa; }
+  .nav-menu a { margin: 0 8px; text-decoration: none; }
+  .nav-menu a:hover { text-decoration: underline; }
+  .nav-menu a.active { font-weight: 600; text-decoration: underline; }
+
+
+  /* --- Shared minimal navbar (match Home) --- */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    border-bottom: 1px solid #eee;
+    backdrop-filter: saturate(150%) blur(6px);
+    background: inherit;
+  }
+  body.dark .site-header, body.dark-mode .site-header { border-bottom: 1px solid #333; }
+  .nav-container {
+    max-width: 800px; margin: 0 auto;
+    padding: 10px 16px 8px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; flex-direction: column; line-height: 1.2; }
+  .nav-menu a { margin: 0 8px; text-decoration: none; }
+  .nav-menu a:hover { text-decoration: underline; }
+  .nav-menu a.active { font-weight: 600; text-decoration: underline; }
+
+
+  /* === UNIFIED NAVBAR (applied across all pages) === */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: #ffffff;
+    border-bottom: 1px solid var(--border, #eee);
+    backdrop-filter: saturate(150%) blur(6px);
+  }
+  body.dark .site-header, body.dark-mode .site-header {
+    background: #1e1e1e;
+    border-bottom-color: #333;
+  }
+  .nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 16px 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 16px; /* consistent brand text size */
+    letter-spacing: 0.2px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  }
+  .brand-sub { 
+    font-size: 12px; 
+    color: var(--muted, #666); 
+    font-weight: 400; 
+    margin-top: 2px; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  }
+  .nav-menu a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: var(--accent, #1772d0);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 15px; /* consistent link size */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol", sans-serif;
+  }
+  .nav-menu a:hover {
+    background: rgba(23,114,208,0.08);
+  }
+  .nav-menu a.active {
+    font-weight: 600;
+    text-decoration: underline;
+    color: inherit;
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <div class="brand"><a href="index.html" style="text-decoration:none; color:inherit;">Muhammad Toseef</a> </div>
+      <div class="brand"><a href="data/MuhammadToseef_CV.pdf">PDF</a></div>
+    <div class="right">
+    <nav class="nav-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="blog.html">Blog</a>
+    </nav></div>
+  </div>
+</header>
+
+  <div class="container">
+    <!-- <h1>Muhammad Toseef</h1> -->
+
+    <div class="section">
+      <h3>📘 Research Interests</h3>
+      <p>
+        Transfer Learning - Biomedical Informatics - Computational Biology -
+        Large Language Models (LLMs) - Clinical Decision Support - EHR - Interpretable AI.
+      </p>
+    </div>
+
+    <div class="section">
+      <details open>
+        <summary>🎓 Education</summary>
+        <ul>
+          <li>
+            <img class="org-logo" src="images/CityU_logo.svg" title="City University of Hong Kong" alt="CityU Logo" />
+            <div>
+              <strong>PhD in Computer Science</strong><br />
+              City University of Hong Kong, 2020-2025
+            </div>
+          </li>
+          <li>
+            <img class="org-logo" src="images/South_China_University_of_Technology_logo.png" title="South China University of Technology" alt="SCUT Logo" />
+            <div>
+              <strong>MS in Software Engineering</strong><br />
+              South China University of Technology, 2018-2020
+            </div>
+          </li>
+          <li>
+            <img class="org-logo" src="images/University_of_Bradford_logo.svg.png" title="University of Bradford" alt="Bradford Logo" />
+            <div>
+              <strong>BEng in Software Engineering</strong><br />
+              University of Bradford, 2010-2014
+            </div>
+          </li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="section">
+      <details open>
+        <summary>💼 Employment and Academic Positions</summary>
+        <ul>
+          <li>
+            <img class="org-logo" src="images/Harvard_Medical_School_shield.svg.png" title="Harvard Medical School" alt="HMS Logo" />
+            <div>
+              <strong>Visiting Research Trainee</strong><br />
+              Harvard Medical School, 2023-2024
+            </div>
+          </li>
+          <li>
+            <img class="org-logo" src="images/CityU_logo.svg" title="CityU HK" alt="CityU Logo" />
+            <div>
+              <strong>Teaching Assistant</strong><br />
+              City University of Hong Kong, 2020-2024
+            </div>
+          </li>
+          
+        </ul>
+      </details>
+    </div>
+
+    <div class="section">
+      <h3>🛠️ Technical Skills</h3>
+      <ul>
+        <li><i class="fas fa-code"></i> &nbsp; Programming: Python, R, Java, Bash, JavaScript</li>
+        <li><i class="fas fa-brain"></i> &nbsp; ML Frameworks: PyTorch, TensorFlow, scikit-learn</li>
+        <li><i class="fas fa-tools"></i> &nbsp; Tools: Slurm, Git, Hadoop, Weka, UML Tools</li>
+        <li><i class="fas fa-server"></i> &nbsp; Operating Systems: Linux, macOS, Windows</li>
+        <!-- <li><i class="fas fa-dna"></i> Bioinformatics: Scanpy, Seurat, scikit-bio, GSEA</li>
+        <li><i class="fas fa-globe"></i> Web Dev: HTML, CSS, GitHub Pages</li> -->
+      </ul>
+    </div>
+
+
+    <div class="section">
+      <h3>🏅 Scholarships / Awards</h3>
+      <ul>
+        <li>Four years UGC funded studentship for PhD degree at City University of Hong Kong</li>
+        <li>China Government Scholarship, South China University of Technology</li>
+        <li>Four years merit scholarship at Namal University Mianwali Pakistan</li>
+        <li>PEEF (Government of Punjab, Pakistan) Scholarship at SSC level</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+<script>
+
+  // Active tab highlight
+  (function() {
+    var path = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(function(a){
+      if (a.getAttribute('href') === path) a.classList.add('active');
+    });
+  })();
+  // Last updated (Month date year), prefer file's last modified
+  (function () {
+    var dateObj = new Date(document.lastModified || Date.now());
+    var parts = new Intl.DateTimeFormat('en-US', {
+      month: 'long', day: 'numeric', year: 'numeric'
+    }).formatToParts(dateObj);
+    var month = parts.find(p => p.type === 'month').value;
+    var day   = parts.find(p => p.type === 'day').value;
+    var year  = parts.find(p => p.type === 'year').value;
+    var formatted = month + ' ' + day + ' ' + year;
+    var el = document.getElementById('last-updated-brand');
+    if (el) el.textContent = formatted;
+  })();
+
+</script>
+<script>
+
+  // Active tab highlight (match Home)
+  (function() {
+    var path = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-menu a').forEach(function(a){
+      if (a.getAttribute('href') === path) a.classList.add('active');
+    });
+  })();
+
+</script>
+</body>
+</html>

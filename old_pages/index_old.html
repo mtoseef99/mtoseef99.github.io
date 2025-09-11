@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Muhammad Toseef</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ----------  GLOBAL STYLES ---------- -->
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"><!-- keep your old CSS -->
+
+  <style>
+    /* Dark mode toggle */
+    .theme-toggle {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 22px;
+      user-select: none;
+    }
+
+    .photo-frame-clean{
+      border-radius: 50%;
+      /* border: 4px solid #fff; */
+      /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+  
+    body.dark {
+      background-color: #1e1e1e;
+      color: #ccc;
+    }
+  
+    body.dark a { color: #80bfff; }
+  
+    body.dark .section-card {
+      background-color: #2a2a2a;
+    }
+  
+    body.dark .section-card h3 {
+      color: #ffc107;
+    }
+  
+    /* Image hover */
+    .paper-thumb {
+      transition: transform 0.3s ease;
+      border-radius: 6px;
+    }
+  
+    .paper-thumb:hover {
+      transform: scale(1.05);
+    }
+  
+    /* Section heading alignment */
+    .section-heading {
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+      padding: 0 16px;
+    }
+  
+    /* Teaching/Service Cards */
+    .section-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 16px;  /* aligned with table sections */
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    }
+  
+    .section-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #333;
+    }
+  
+    .section-card ul {
+      margin: 6px 0;
+      padding-left: 20px;
+    }
+  
+    .section-card li {
+      margin: 4px 0;
+    }
+
+    .clustr-icon:hover {
+      opacity: 1.0 !important;
+    }
+
+    /* Simple navigation */
+    .nav-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px 16px 0 16px;
+    }
+
+    .nav-menu {
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    .nav-menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #1772d0;
+      font-weight: normal;
+    }
+
+    .nav-menu a:hover {
+      color: #f09228;
+    }
+
+    .nav-menu a.active {
+      font-weight: 700;
+      color: #333;
+    }
+
+    body.dark .nav-menu a.active {
+      color: #ccc;
+    }
+    
+  </style>
+  
+</head>
+
+<body>
+
+<!-- ----------  HEADER: NAME + PHOTO ---------- -->
+<table style="width:100%;max-width:800px;border:0;margin:auto;">
+  <tr>
+    <td style="padding:2.5%;width:63%;vertical-align:middle;">
+      <p class="name" style="text-align:center;">Muhammad Toseef</p>
+
+      <!-- Polished bio -->
+      <p>
+        <!-- <strong>Short Bio:</strong> &nbsp;  -->
+        <strong>Short Bio:</strong> I completed my PhD in Computer Science at
+        <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a>,
+        supervised by <a href="https://scholars.cityu.edu.hk/en/persons/ka-chun-wong-2">Prof. Ka-Chun Wong</a>.
+        From December 2023 to June 2024, I was a visiting PhD student in the
+        <a href="https://hemberg-lab.github.io/">Hemberg Lab</a> at Brigham and Women’s Hospital,
+        Harvard Medical School, under the supervision of
+        <a href="https://dms.hms.harvard.edu/people/martin-hemberg">Prof. Martin Hemberg</a>.
+        <br><br> Prior to that, I received BEng and MS in Software Engineering from the
+        <a href="http://bradford.ac.uk/external/">University of Bradford</a> and
+        <a href="https://www.scut.edu.cn/en/">South China University of Technology</a>, respectively.
+      </p>
+
+      
+            
+      <!-- Links -->
+      <p style="text-align:center">
+        <a href="mailto:mtoseef2-c@my.cityu.edu.hk">Email</a> &nbsp;/&nbsp;
+        <a href="cv.html">CV</a> &nbsp; [<a href="data/MuhammadToseef_CV.pdf">PDF</a>] &nbsp;/&nbsp;
+        <!-- <a href="data/MuhammadToseef_CV.pdf">CV </a> &nbsp;/&nbsp; -->
+        <a href="https://scholar.google.com/citations?user=Zlb-qX4AAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+        <!-- <a href="https://orcid.org/0000-0003-1507-104X">ORCID</a> &nbsp;/&nbsp; -->
+        <a href="https://github.com/mtoseef99/">GitHub</a> &nbsp;/&nbsp;
+        <a href="https://www.researchgate.net/profile/Muhammad-Toseef">ResearchGate</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/toseef-991860/">LinkedIn</a>
+      </p>
+      <br>
+      <p>
+            📌 <strong style="color:red;"> I am currently looking for postdoctoral opportunities.</strong></p>
+
+    </td>
+
+    <!-- Profile photo -->
+    <td style="padding:0.5em;width:22%;max-width:160px;">
+      <a href="images/toseef.jpeg">
+        <img src="images/toseef.jpeg" class="photo-frame-clean" alt="Profile photo">
+             <!-- style="width:100%;max-width:150px;height:auto;object-fit:cover;border-radius:50%;"> -->
+      </a>
+      <!-- Dark-mode toggle icon -->
+      <div style="display: flex; justify-content: center; margin-top: 6px;">
+        <div onclick="document.body.classList.toggle('dark')"
+             style="cursor:pointer; font-size: 22px;">🌓</div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- ----------  RESEARCH INTERESTS ---------- -->
+<table style="width:100%;max-width:800px;border:0;margin:auto;">
+  <tr>
+    <td style="padding:16px;">
+      <h2>Research Interests</h2>
+      <p>
+        My research interests span <font color="green"> Transfer Learning,
+        Biomedical Informatics, Computational Biology , and
+        AI for Health</font> .  
+        My recent research focuses on topics such as <font color="#DC143C">large language models (LLMs) and 
+         multimodal models (MMLMs) </font> to <em>genomics</em> and <em>clinical data</em>. <br> <br>
+
+        I am particularly interested in exploring <font color="#B22222"> electronic health records (EHRs) </font>
+        using large language models and transfer learning approaches, with the goal 
+        of developing interpretable, scalable, and generalizable models that can 
+        support clinical decision-making across diverse patient populations. 
+        <!-- <br> <br>  -->
+        <!-- Please feel free to contact me for academic collobarations at <em>mtoseef2-c@my.cityu.edu.hk</em>.  -->
+        <!-- <br><br><strong style="color:red;"> 🎯 I am currently looking for postdoctoral opportunities starting in Fall 2025.</strong> <br> -->
+      </p>
+    </td>
+  </tr>
+</table>
+
+<!-- ----------  PUBLICATIONS ---------- -->
+<table style="width:100%;max-width:800px;border:0;margin:auto;">
+  <tr><td style="padding:16px;"><h2>Selected Publications</h2>(<a href="https://scholar.google.com/citations?user=Zlb-qX4AAAAJ&hl=en">full list</a>)</td></tr>
+</table>
+
+<table style="width:100%;max-width:800px;border-collapse:collapse;margin:auto;">
+  <tbody>
+
+  <!-- Repeat rows as needed; images use class="paper-thumb" for hover zoom -->
+  <tr>
+    <td style="padding:12px;width:20%;vertical-align:middle">
+      <img src="images/bib_1.jpeg" width="160" class="paper-thumb">
+    </td>
+    <td style="padding:12px;width:80%;vertical-align:middle">
+      <a href="https://academic.oup.com/bib/article/23/3/bbac078/6551112">
+        <span class="papertitle">Reducing healthcare disparities using multiple multiethnic data distributions with fine-tuning of transfer learning</span>
+      </a><br>
+      <strong>Muhammad Toseef</strong>,
+      <a href="https://lixt314.github.io/BDCI.github.io/">Xiangtao Li</a>,
+      <a href="http://www.cs.utoronto.ca/~wkc/">Ka-Chun Wong</a><br>
+      <em>Briefings in Bioinformatics</em>, 2022
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:12px;width:20%;vertical-align:middle">
+      <img src='images/zliu-paper.jpeg' width="160">
+    </td>
+    <td style="padding:12px;width:80%;vertical-align:middle">
+      <a href="https://link.springer.com/article/10.1007/s10528-023-10516-4">
+        <span class="papertitle">Construction of Immune Infiltration-Related LncRNA Signatures Based on Machine Learning for the Prognosis in Colon Cancer</span>
+      </a>
+      <br>
+      Zhe Liu,
+      Olutomilayo Olayemi Petinrin,
+      <strong>Muhammad Toseef</strong>,
+      Nanjun Chen,
+      Ka-Chun Wong
+      <br>
+      <em> Biochemical Genetics</em>, 2023
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:12px;width:20%;vertical-align:middle">
+      <img src='images/tomi-paper.jpg' width="160">
+    </td>
+    <td style="padding:12px;width:80%;vertical-align:middle">
+      <a href="https://www.sciencedirect.com/science/article/pii/S2001037023001459">
+        <span class="papertitle">Machine learning in metastatic cancer research: Potentials, possibilities, and prospects</span>
+      </a>
+      <br>
+      Olutomilayo Olayemi Petinrin,
+      Faisal Saeed,
+      <strong>Muhammad Toseef</strong>,
+      Zhe Liu,
+      Ibukun Omotayo Muyide,
+      Qiuzhen Lin,
+      Xiangtao Li,
+      Ka-Chun Wong
+      <br>
+      <em>Computational and Structural Biotechnology Journal</em>, 2023
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:12px;width:20%;vertical-align:middle">
+      <img src='images/bib_1.jpeg' width="160">
+    </td>
+    <td style="padding:12px;width:80%;vertical-align:middle">
+      <a href="https://academic.oup.com/bib/article/24/4/bbad254/7224398">
+        <span class="papertitle">Deep transfer learning for clinical decision-making based on high-throughput data: comprehensive survey with benchmark results</span>
+      </a>
+      <br>
+      <strong>Muhammad Toseef</strong>,
+      Olutomilayo Olayemi Petinrin,
+      Fuzhou Wang,
+      Saifur Rahaman,
+      Zhe Liu,
+      Xiangtao Li,
+      Ka-Chun Wong
+      <br>
+      <em>Briefings in Bioinformatics</em>, 2023
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:12px;width:20%;vertical-align:middle">
+      <img src='images/fuzhou-paper.jpg' width="160">
+    </td>
+    <td style="padding:12px;width:80%;vertical-align:middle">
+      <a href="https://www.cell.com/iscience/fulltext/S2589-0042(22)01807-7">
+        <span class="papertitle">GILoop: Robust chromatin loop calling across multiple sequencing depths on Hi-C data</span>
+      </a>
+      <br>
+      Fuzhou Wang,
+      Tingxiao Gao,
+      Jiecong Lin,
+      Zetian Zheng,
+      Lei Huang,
+      <strong>Muhammad Toseef</strong>,
+      Xiangtao Li,
+      Ka-Chun Wong
+      <br>
+      <em>iScience</em>, 2022
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:12px;width:20%;vertical-align:middle">
+      <img src='images/aiman-paper.jpg' width="160">
+    </td>
+    <td style="padding:12px;width:80%;vertical-align:middle">
+      <a href="https://www.sciencedirect.com/science/article/pii/S1110866520301602">
+        <span class="papertitle">Synthetic data with neural machine translation for automatic correction in Arabic grammar</span>
+      </a>
+      <br>
+      Aiman Solyman,
+      Wang Zhenyu,
+      Tao Qian,
+      Arafat Abdulgader Mohammed Elhag,
+      <strong>Muhammad Toseef</strong>,
+      Zeinab Aleibeid
+      <br>
+      <em>Egyptian Informatics Journal</em>, 2021
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
+<!-- ----------  TEACHING & ACADEMIC SERVICE ---------- -->
+<!-- <div class="section-heading"><h2>Teaching &amp; Academic Service</h2></div> -->
+
+<div class="section-card">
+  <h3>Teaching Experience</h3>
+  <p><strong>City University of Hong Kong</strong> – Teaching Assistant</p>
+  <ul>
+    <li><a href="https://www.cityu.edu.hk/catalogue/ug/current/course/CS3342.htm">CS3322 Software Design</a></li>
+    <li><a href="https://www.cityu.edu.hk/catalogue/ug/current/course/CS4480.htm">CS4480 Data-Intensive Computing</a></li>
+    <li><a href="https://www.cityu.edu.hk/catalogue/pg/202324/course/CS5488.htm">CS5488 Big Data Algorithms & Techniques</a></li>
+  </ul>
+
+  <!-- <p><strong>University of Sargodha, Pakistan</strong> – Lecturer</p>
+  <ul>
+    <li>Software Engineering</li>
+    <li>Information Systems</li>
+  </ul> -->
+</div>
+
+<div class="section-card">
+  <h3>Academic Services</h3>
+  <p><strong>Conference Reviewer:</strong> ICONIP 2024 & 2025, IEEE Big Data 2022, ISMSI 2020 & 2021</p>
+  <p><strong>Journal Reviewer:</strong> Computational and Structural Biotechnology Journal, Heliyon, BioData Mining, PeerJ Computer Science</p>
+</div>
+
+<!-- ----------  CLUSTRMAP WIDGET ---------- -->
+<div style="text-align:center; margin-top:40px;">
+  <script id="clustrmaps"
+          type="text/javascript"
+          src="https://clustrmaps.com/map_v2.js?d=wgmTzE27wxgiM1cyv0NR4x5qbW0APmuvEkKyTL_bBbk&cl=ffffff&w=320">
+  </script>
+</div>
+
+
+
+
+
+
+<!-- ----------  FOOTER ---------- -->
+<table style="width:100%;max-width:800px;border:0;margin:auto;">
+  <tr><td style="padding:0;">
+    <p style="text-align:center;font-size:x-small;">
+      Design adapted from <a href="https://jonbarron.info" style="font-size:x-small">Jon Barron's website</a>.
+    </p>
+  </td></tr>
+</table>
+
+  <!-- Bottom-right ClustrMaps icon inside layout -->
+<!-- <div style="position: relative; max-width: 800px; margin: 0 auto;">
+  <div style="position: absolute; bottom: 0; right: 0; padding: 6px;">
+    <a href="https://clustrmaps.com/site/1c6qw" target="_blank" title="View visitor map">
+      <img class="clustr-icon" src="https://clustrmaps.com/favicon.ico"
+           alt="Visitor Map Icon"
+           style="width:20px; height:20px; opacity:0.8; border-radius:4px;">
+    </a>
+  </div>
+</div> -->
+
+</body>
+
+<!-- <div style="width: 100%; max-width: 800px; margin: 30px auto 0 auto; display: flex; justify-content: flex-end;">
+  <div>
+    <script type="text/javascript" id="clustrmaps" 
+      src="//clustrmaps.com/map_v2.js?d=wgmTzE27wxgiM1cyv0NR4x5qbW0APmuvEkKyTL_bBbk&cl=ffffff&w=160">
+    </script>
+  </div>
+</div> -->
+
+</html>
