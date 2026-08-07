@@ -145,6 +145,16 @@
       margin-top: 6px;
     }
 
+    /* Visitor map widget */
+    .visitor-map {
+      margin: 40px auto 20px;
+      max-width: 260px;
+      text-align: center;
+      opacity: 0.85;
+    }
+    .visitor-map img,
+    .visitor-map canvas { max-width: 100%; height: auto; }
+
 </style>
   <link rel="stylesheet" href="navbar.css">
 </head>
@@ -384,9 +394,9 @@
   </script>
 </div> -->
 <!-- ---------- MAPMYVISITORS ---------- -->
-<div style="text-align:center; margin-top:40px;">
+<div class="visitor-map">
   <script type="text/javascript" id="mapmyvisitors"
-          src="//mapmyvisitors.com/map.js?d=nBH2NTMRcM99vzXb0dAJKq_osl9aDzxS9IrwSrGcQkM&cl=ffffff&w=a">
+          src="//mapmyvisitors.com/map.js?d=nBH2NTMRcM99vzXb0dAJKq_osl9aDzxS9IrwSrGcQkM&cl=ffffff&w=260">
   </script>
 </div>
 
